@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catatan-Registrasi</title>
+    <link rel="stylesheet" href="/public/assets/style/registrasi.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Registrasi</h2>
+
+      <p id="error-message"></p>
+
+      <form class="user-regist" id="user-regist" action="" method="post">
+        <div class="input-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <label for="hashedPassword">Password</label>
+          <input
+            type="password"
+            id="hashedPassword"
+            name="hashedPassword"
+            required />
+          <label for="confirm-password">Konfirmasi Password</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required />
+        </div>
+
+        <!-- Login button -->
+        <button type="submit" class="button-regist">Registrasi</button>
+
+        <p>Sudah memiliki akun?</p>
+        <a href="/public/index.html" title="login">
+          <button type="button">Masuk</button></a
+        >
+      </form>
+    </div>
+
+    <script src="../js/registrasi.js"></script>
+  </body>
+</html>

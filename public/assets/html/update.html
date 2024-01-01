@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Catatan Buku</title>
+    <link rel="stylesheet" href="../style/tambah-update.css" />
+  </head>
+  <body>
+    <section class="update" id="update">
+      <h1>Update Catatan Buku</h1>
+      <form class="update-buku" id="update-buku" method="post">
+        <div class="input-group">
+          <label for="sampul-buku">Sampul Buku</label>
+          <input type="file" id="sampul-buku" name="sampul-buku" required />
+        </div>
+
+        <div class="input-group">
+          <label for="judul-buku">Judul Buku</label>
+          <input type="text" id="judul-buku" name="judul-buku" required />
+        </div>
+
+        <div class="input-group">
+          <label for="total-hlm">Total Halaman</label>
+          <input type="text" id="total-hlm" name="total-hlm" required />
+        </div>
+
+        <div class="input-group">
+          <label for="progres">Progres Baca</label>
+          <input
+            type="text"
+            id="progres"
+            name="progres"
+            placeholder="halaman 104 - 201"
+            required />
+        </div>
+
+        <!-- Login button -->
+        <button type="submit" class="button-update">Update</button>
+
+        <a href="./home.html" title="batal">
+          <button type="button">Batal</button></a
+        >
+      </form>
+    </section>
+
+    <script src="../js/update.js"></script>
+  </body>
+</html>

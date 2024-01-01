@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffff99;
+}
+
+nav {
+  background-color: #ffcc00;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 100px;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.logo span {
+  font-style: italic;
+  color: #dc3545;
+}
+
+.keluar button {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 100px;
+}
+
+section {
+  padding: 20px;
+  margin: 0 100px;
+}
+
+.judul h1 {
+  color: #ffcc00;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.add-button {
+  background-color: #ffcc00;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.tabel-catatan {
+  margin-top: 16px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.title-table th {
+  background-color: #ffcc00;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600; /* Added font weight */
+}
+
+.title-table th:not(:first-child) {
+  text-align: center;
+}
+
+.table td {
+  background-color: white;
+  text-align: center;
+  padding: 2px;
+}
+
+.table button {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.table img {
+  width: 200px;
+  height: auto;
+}
+
+footer {
+  background-color: #ffcc00;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.foot-container p {
+  font-size: 12px;
+  margin: 0;
+}

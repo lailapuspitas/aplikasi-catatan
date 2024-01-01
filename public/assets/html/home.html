@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Utama</title>
+    <link rel="stylesheet" href="../style/home.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <p>Catatan.<span>Bacaan</span></p>
+      </div>
+      <div class="keluar">
+        <a href="/public/index.html"
+          ><button type="button" class="button-keluar">Keluar</button></a
+        >
+      </div>
+    </nav>
+    <section>
+      <div class="judul">
+        <h1>Catatan Bacaan Buku</h1>
+      </div>
+      <div class="atas">
+        <a href="./tambah.html" title="tambah">
+          <button class="add-button" type="button">+ Tambah Buku</button></a
+        >
+      </div>
+      <div class="tabel-catatan">
+        <table class="table" id="table">
+          <thead>
+            <tr class="title-table">
+              <th id="no-data">Nomor</th>
+              <th id="sampul-buku">Sampul</th>
+              <th id="judul-buku">Judul</th>
+              <th id="total-hlm">Total Halaman</th>
+              <th id="progres">Progres Baca</th>
+              <th id="aksi">Aksi</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <div class="foot-container">
+        <p>&copy;Laila | Hak Cipta Dilindungi</p>
+      </div>
+    </footer>
+
+    <script src="../js/home.js"></script>
+  </body>
+</html>
