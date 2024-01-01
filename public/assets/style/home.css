@@ -76,7 +76,7 @@ section {
   color: white;
   padding: 10px;
   text-align: center;
-  font-weight: 600; /* Added font weight */
+  font-weight: 600;
 }
 
 .title-table th:not(:first-child) {

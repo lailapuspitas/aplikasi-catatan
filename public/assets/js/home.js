@@ -9,12 +9,10 @@ async function getCatatanDataFromDB() {
 function createCatatanTableRow(buku, index) {
   const tr = document.createElement("tr");
 
-  // Number column
   const tdNumber = document.createElement("td");
-  tdNumber.textContent = index + 1; // Displaying 1-based index
+  tdNumber.textContent = index + 1;
   tr.appendChild(tdNumber);
 
-  // Sampul column
   const tdSampul = document.createElement("td");
   const sampulImg = document.createElement("img");
   sampulImg.src = `/all-backend/image-upload/${buku.sampul}`;
@@ -22,17 +20,14 @@ function createCatatanTableRow(buku, index) {
   tdSampul.appendChild(sampulImg);
   tr.appendChild(tdSampul);
 
-  // Judul column
   const tdJudul = document.createElement("td");
   tdJudul.textContent = buku.judul;
   tr.appendChild(tdJudul);
 
-  // Total Pages column
   const tdTotalPages = document.createElement("td");
   tdTotalPages.textContent = buku.total;
   tr.appendChild(tdTotalPages);
 
-  // Progress column
   const tdProgress = document.createElement("td");
   tdProgress.textContent = buku.progres;
   tr.appendChild(tdProgress);
@@ -40,18 +35,16 @@ function createCatatanTableRow(buku, index) {
   const tdActions = document.createElement("td");
   const actionDiv = document.createElement("div");
 
-  // Update button
   const updateButton = document.createElement("button");
   updateButton.textContent = "Update";
   updateButton.classList.add("update-button");
-  updateButton.onclick = () => redirectToUpdatePage(buku.id); // Pass book ID to the update function
+  updateButton.onclick = () => redirectToUpdatePage(buku.id);
   actionDiv.appendChild(updateButton);
 
-  // Delete button
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "Hapus";
   deleteButton.classList.add("delete-button");
-  deleteButton.onclick = () => deleteCatatan(buku.id); // Pass book ID to the delete function
+  deleteButton.onclick = () => deleteCatatan(buku.id);
   actionDiv.appendChild(deleteButton);
 
   tdActions.appendChild(actionDiv);
@@ -69,9 +62,8 @@ async function deleteCatatan(bukuId) {
     });
 
     if (response.ok) {
-      // Book deleted successfully, you may want to update the UI accordingly
       console.log("Catatan deleted successfully");
-      // Reload the page to reflect the changes
+
       location.reload();
     } else {
       console.error("Failed to delete Catatan");
@@ -82,7 +74,6 @@ async function deleteCatatan(bukuId) {
 }
 
 function redirectToUpdatePage(bukuId) {
-  // Replace 'update.html' with the path to your update page
   window.location.href = `/public/assets/html/update.html?id=${bukuId}`;
 }
 

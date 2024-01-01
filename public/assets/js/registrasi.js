@@ -14,7 +14,6 @@ async function addNewUser() {
   const hashedPassword = document.getElementById("hashedPassword").value;
   const confirmPassword = document.getElementById("confirm-password").value;
 
-  // Check if passwords match
   if (hashedPassword !== confirmPassword) {
     window.alert("Password and confirm password do not match.");
     return;
@@ -38,10 +37,8 @@ async function addNewUser() {
     if (response.status === 201) {
       const responseData = await response.json();
 
-      // Clear the form fields
       clearForm();
 
-      // Show success alert and redirect to index.html
       showAlertAndRedirect("User successfully created!", "/public/index.html");
     } else {
       console.error("Failed to create user. Status code:", response.status);
@@ -52,12 +49,12 @@ async function addNewUser() {
     displayErrorMessage(error.message);
   }
 }
-// Function to display error message in the <p> element
+
 function displayErrorMessage(message) {
   const errorMessageElement = document.getElementById("error-message");
   errorMessageElement.textContent = message;
 }
-// Clear the form fields
+
 function clearForm() {
   document.getElementById("nama").value = "";
   document.getElementById("email").value = "";
@@ -65,7 +62,6 @@ function clearForm() {
   document.getElementById("confirm-password").value = "";
 }
 
-// Show alert message and redirect to index.html
 function showAlertAndRedirect(message, redirectUrl) {
   window.alert(message);
   window.location.href = redirectUrl;

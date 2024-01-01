@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (response.ok) {
         console.log("Login successful:", data);
-        // Make sure the path to your home.html file is correct
+
         window.location.href = "/public/assets/html/home.html";
       } else {
         console.error("Login failed:", data.message);
-        // Show error message to the user
+
         if (
           data.errorCode === "USER_NOT_FOUND" ||
           data.errorCode === "INVALID_PASSWORD"
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     } catch (error) {
       console.error("Error during login:", error);
-      // Show general error message to the user
       alert("An error occurred during login. Please try again later.");
     }
   });
